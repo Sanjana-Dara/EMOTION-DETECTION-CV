@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About US</title>
+<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='style1.css') }}">
+</head>
+<body>
+  <h1 style="font-family: Comic Sans ms; font-size: 40px; padding-bottom: 20px; padding-top: 20px; color:white; text-align: center;">GROUP-14 TEAM MEMBERS</h1>
+<div class="flip-card_1">
+  <div class="flip-card-inner_1">
+    <div class="flip-card-front_1">
+      <img src={{ url_for('static', filename="sanju.jpeg") }} alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back_1">
+      <h3>Dara Sanjana</h3>
+      <h>CED18I015</h3>
+      <p>Field:CSE</p>
+    </div>
+  </div>
+</div>
+<div class="flip-card_2">
+  <div class="flip-card-inner_2">
+    <div class="flip-card-front_2">
+      <img src={{ url_for('static', filename="dheekshitha.jpeg") }} alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back_2">
+      <h3>KVN Sai Dheekshitha</h3>
+      <p>CED18I026</p>
+      <p>Field:CSE</p>
+    </div>
+  </div>
+</div>
+<div class="flip-card_3">
+  <div class="flip-card-inner_3">
+    <div class="flip-card-front_3">
+      <img src={{ url_for('static', filename="kavya.jpeg")}} alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back_3">
+      <h3>Kavya<br>Vemuri</h3>
+      <p>CED18I027</p>
+      <p>Field:CSE</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

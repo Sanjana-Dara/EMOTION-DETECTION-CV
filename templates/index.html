@@ -1,0 +1,90 @@
+{%extends "base.html"%}
+
+{%block content%}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>EMOTION DETECTION</title>
+    <link href ="static/smiley.jpg" rel = "icon">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	</head>
+	<body class="homepage is-preload" style="background-color: #06021a;" >
+		<div class="bg">
+		<div id="page-wrapper">
+
+				<div id="header-wrapper">
+					<div class="container">
+
+							<header id="header">
+								<div class="inner">
+
+
+										<h1 style="font-weight: bold; font-size:35px;">EMOTION DETECTION</h1>
+
+										<nav id="nav">
+											<ul>
+												<li class="current_page_item" ><a href="#this">Home</a></li>
+
+												<li><a onclick="window.location.href='team_members';" class="btn btn-dark">Team Details</a></li>
+											</ul>
+										</nav>
+
+								</div>
+							</header>
+
+							<div id="banner" id="this" >
+								<h2 style=" text-transform: uppercase; background-color: #292826;">
+
+							</div>
+
+
+              <div class="block" >
+
+            <h2 class='display-4'>Select File</h2>
+            <form name='frm' method='POST' action="{{url_for('predict')}}" enctype='multipart/form-data'>
+
+              <div class="form-group">
+
+                  <div class="custom-file my-3">
+                  <input type="file" name="select_file" required="true">
+
+              </div>
+
+              </div>
+              <center>
+              <input type="submit" name="btn" class='btn btn-primary'>
+              </center>
+            </form>
+          	</div>
+						
+            </div>
+				</div>
+
+
+
+
+
+
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.dropotron.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+{%endblock%}

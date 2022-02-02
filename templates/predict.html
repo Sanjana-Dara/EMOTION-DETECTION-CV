@@ -1,0 +1,61 @@
+{%extends "base.html"%}
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+		<style>
+
+  h2 {
+    width: 50%;
+    float: right;
+
+  }
+body{
+	background-color: black;
+}
+
+	</style>
+		<meta charset="utf-8">
+		<title>Emotion Detection</title>
+
+	</head>
+	<body>
+		<header id="header">
+			<div class="inner">
+
+
+					<h1 style="font-weight: bold; font-size:35px;">EMOTION DETECTION</h1>
+
+					<nav id="nav">
+						<ul>
+							<li><a onclick="window.location.href='/';" class="btn btn-dark">Home</a></li>
+
+							<li><a onclick="window.location.href='team_members';" class="btn btn-dark">Team Details</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</header>
+
+  <br><br>
+		<img style="float: left; margin-left:5%;" src="{{url_for('static', filename='after.jpg')}}" height=460px width=40% >
+
+		<h2>Face Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emotion</h2>
+		{%for i in range(0, len)%}
+
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{i+1}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data[i]}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{send[i]}}</h2>
+
+		{%endfor%}
+
+
+
+	</body>
+</html>
+
+
+
+
+
+{%endblock%}
